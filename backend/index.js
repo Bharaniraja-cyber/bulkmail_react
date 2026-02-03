@@ -7,7 +7,7 @@ const app = express()
 const mongoURI = process.env.MONGO_URL;
 const port = process.env.PORT || 5002;
 app.use(cors({
-    origin: "https://bulkmail-fawn.vercel.app/", 
+    origin: "https://bulkmail-kappa-plum.vercel.app/", 
     methods: ["POST", "GET"],
     credentials: true
  }
