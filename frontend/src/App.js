@@ -36,7 +36,7 @@ function App() {
 
   function click(){
     setstatus(true)
-    axios.post("${process.env.REACT_APP_API_URL}/sendmail",{msg:msg,emaillist:emaillist})
+    axios.post("process.env.REACT_APP_API_URL/sendmail",{msg:msg,emaillist:emaillist})
     .then(function(data){
       if(data.data === true){
         alert("Mail sent successfully..")
