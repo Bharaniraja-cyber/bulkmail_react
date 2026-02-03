@@ -72,8 +72,6 @@ new Promise(async function(response, reject){
 
 
 
-app.listen(port,function(){
-    console.log("server started....")
-})
+module.exports = app;
 
 
