@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 app.use(cors({
-    origin: "https://bulkmail-kappa-plum.vercel.app/.app", // Your Vercel URL
+    origin: "https://bulkmail-kappa-plum.vercel.app", // Your Vercel URL
     methods: ["GET", "POST"],
     credentials: true
 }));
