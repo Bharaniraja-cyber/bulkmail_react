@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
-require('dotenv').config(); // Load environment variables
 
 const app = express();
 app.use(cors());
