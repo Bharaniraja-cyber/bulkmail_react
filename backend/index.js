@@ -4,7 +4,11 @@ const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://bulkmail-kappa-plum.vercel.app/.app", // Your Vercel URL
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(express.json());
 
 // Use Environment Variable for MongoDB Connection
