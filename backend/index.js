@@ -1,20 +1,14 @@
-require('dotenv').config();
+
 const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 const nodemailer = require("nodemailer");
 const app = express()
-const mongoURI = process.env.MONGO_URL;
-const port = process.env.PORT || 5002;
-app.use(cors({
-    origin: "https://bulkmail-kappa-plum.vercel.app/", 
-    methods: ["POST", "GET"],
-    credentials: true
- }
-))
+
+app.use(cors())
 app.use(express.json())
 
-mongoose.connect(mongoURI).then(function(){
+mongoose.connect("mongodb+srv://bharaniraja21_db_user:yagROitZKPOC2Q4A@cluster0.np2mfat.mongodb.net/bulkmail").then(function(){
     console.log("Db connected")
 }).catch(function(){
     console.log("connection failed")
@@ -71,7 +65,8 @@ new Promise(async function(response, reject){
 
 
 
-
-module.exports = app;
+app.listen(5002,function(){
+    console.log("server started")
+})
 
 
